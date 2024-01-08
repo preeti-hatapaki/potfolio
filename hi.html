@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #f4f4f4;
+            color: #333;
+            transition: background-color 0.3s ease, color 0.3s ease;
+        }
+
+        body.dark-mode {
+            background-color: #333;
+            color: #fff;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+            background-color: #3498db;
+            color: #fff;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: #2980b9;
+            padding: 10px 20px;
+        }
+
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            margin: 0 15px;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ecf0f1;
+        }
+
+        .moon-icon {
+            color: #fff;
+            font-size: 1.2em;
+            margin-right: 5px;
+        }
+
+        section {
+            margin: 20px;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            transition: box-shadow 0.3s ease;
+        }
+
+        section.dark-mode {
+            background-color: #34495e;
+            color: #fff;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+        }
+
+        h2 {
+            color: #3498db;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        .container {
+            width: 80%;
+            margin: auto;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+        }
+
+        .skill {
+            width: 48%;
+            margin-bottom: 20px;
+        }
+
+        .progress-bar {
+            background-color: #ecf0f1;
+            height: 20px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .progress {
+            height: 100%;
+            width: 70%;
+            background-color: #3498db;
+            border-radius: 10px;
+            transition: width 1s ease;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background-color: #3498db;
+            color: #fff;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            display: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .back-to-top:hover {
+            background-color: #2980b9;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Your Name</h1>
+        <p>Web Developer and Enthusiast</p>
+    </header>
+
+    <nav>
+        <a href="#about">About</a>
+        <a href="#education">Education</a>
+        <a href="#competition">Competition</a>
+        <a href="#skills">Skills</a>
+        <a href="#hobbies">Hobbies</a>
+        <div class="dark-mode-toggle" onclick="toggleMode()">
+            <i class="fas fa-moon moon-icon"></i>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- About Me Section -->
+        <section id="about">
+            <h2>About Me</h2>
+            <p>Write a brief description about yourself here.</p>
+        </section>
+
+        <!-- Education Section -->
+        <section id="education">
+            <h2>Education</h2>
+            <p>Specify your educational background here.</p>
+        </section>
+
+        <!-- Competition Participation Section -->
+        <section id="competition">
+            <h2>Competition Participation</h2>
+            <ul>
+                <li>Competition 1 - Year</li>
+                <li>Competition 2 - Year</li>
+                <!-- Add more as needed -->
+            </ul>
+        </section>
+
+        <!-- Tech Skills Section -->
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills">
+                <div class="skill">
+                    <p>HTML</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 90%;"></div>
+                    </div>
+                </div>
+                <div class="skill">
+                    <p>CSS</p>
+                    <div class="progress-bar">
+                        <div class="progress" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <!-- Add more skills as needed -->
+            </div>
+        </section>
+
+        <!-- Hobbies Section -->
+        <section id="hobbies">
+            <h2>Hobbies</h2>
+            <p>Share your hobbies and interests.</p>
+        </section>
+    </div>
+
+    <script>
+        function toggleMode() {
+            const body = document.body;
+            const sections = document.querySelectorAll('section');
+
+            body.classList.toggle('dark-mode');
+            sections.forEach(section => section.classList.toggle('dark-mode'));
+        }
+    </script>
+
+</body>
+</html>
